@@ -100,7 +100,7 @@ resource "aws_route53_record" "uuu" {
   name    = "trial"
   type    = "A"
   ttl     = 300
-  records = ["52.49.42.173"]
+  records = [aws_instance.ins.public_ip]
 }
 
 
