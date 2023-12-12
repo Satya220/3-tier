@@ -83,6 +83,15 @@ resource "aws_route53_record" "www" {
   }
 }
 
+resource "aws_route53_record" "uuu" {
+  zone_id = aws_route53_zone.primary.zone_id
+  name    = "trial"
+  type    = "A"
+  ttl     = 300
+  records = ["52.49.42.173"]
+}
+
+
 resource "aws_route53_zone" "primary" {
   name = "satya.aws.crlabs.cloud"
 }
